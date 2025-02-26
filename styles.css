@@ -1,4 +1,4 @@
-/* 背景デザイン */
+/* 基本設定 */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -7,75 +7,61 @@ body {
     background: linear-gradient(to bottom, #e6f0ff, #ffffff);
 }
 
-/* 言語切り替えボタン */
-.lang-buttons {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.lang-buttons button {
-    background: #ffffff;
-    border: 2px solid #ccc;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 5px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.lang-buttons button:hover {
-    background: #f0f0f0;
-}
-
 /* ヘッダー */
-h1 {
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 5px;
+header {
+    background: #005a8d;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
 }
 
-h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* メインコンテンツ */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
+/* ボタンデザイン */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-/* PNFとは の見出しを一行で表示 */
-h2.single-line, p.single-line {
-    white-space: nowrap; /* 改行を防ぐ */
-}
-
-/* コンテンツ */
-.content {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: center;
-}
-
-/* 目次 */
-.menu {
-    margin-top: 40px;
-}
-
-.menu a {
-    display: block;
-    font-size: 20px;
+.page-button {
+    padding: 12px 20px;
+    background: #005a8d;
+    color: white;
+    border-radius: 5px;
     text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
-    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    min-width: 200px;
+    max-width: 100%;
+    display: inline-block;
 }
 
-.menu a:hover {
-    text-decoration: underline;
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page-button {
+        width: 100%;
+        display: block;
+    }
 }
